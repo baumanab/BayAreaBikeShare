@@ -184,7 +184,7 @@ div#notebook {
 <p><strong>Answer</strong>: 
 To inform business decisions I would consider:</p>
 <ul>
-<li><p>useag disribution as a function of:</p>
+<li><p>useage disribution as a function of:</p>
 <ul>
 <li>time of day</li>
 <li>day of year</li>
@@ -198,13 +198,20 @@ To inform business decisions I would consider:</p>
 <li>Customer segments</li>
 <li>Whether or not any service point is running out of bikes and when (time of day, day of year)</li>
 </ul>
-<p>The main questions come down to the classic "Who, what, when, why, where."</p>
-<ol>
+<p>The main general questions come down to the classic "Who, what, when, why, where."</p>
+<ul>
 <li>Who uses the bike share?</li>
 <li>How do they use it?</li>
 <li>Why do they use  it?</li>
 <li>When do they use it?</li>
 <li>Where do they use it (where do they pick up and return)?</li>
+</ul>
+<p>Finally some more specific questoins would inlcude:</p>
+<ol>
+<li>What are the demographics of each user?</li>
+<li>What is the most common day of useage for subsribers, and customers?</li>
+<li>What is the most common time of useage for subscribers and customers?</li>
+<li>What is the most common trip duration?</li>
 </ol>
 <blockquote><p><strong>Tip</strong>: If you double click on this cell, you will see the text change so that all of the formatting is removed. This allows you to edit this block of text. This block of text is written using <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>, which is a way to format text using headers, links, italics, and many other options. You will learn more about Markdown later in the Nanodegree Program. Hit <strong>Shift</strong> + <strong>Enter</strong> or <strong>Shift</strong> + <strong>Return</strong>.</p>
 </blockquote>
@@ -221,10 +228,76 @@ To inform business decisions I would consider:</p>
 <p>In 2014, Bay Area Bike Share held an <a href="http://www.bayareabikeshare.com/datachallenge-2014">Open Data Challenge</a> to encourage data analysts to create visualizations based on their open data set. You’ll create your own visualizations in this project, but first, take a look at the <a href="http://thfield.github.io/babs/index.html">submission winner for Best Analysis</a> from Tyler Field. Read through the entire report to answer the following question:</p>
 <p><strong>Question 2</strong>: What visualizations do you think provide the most interesting insights? Are you able to answer either of the questions you identified above based on Tyler’s analysis? Why or why not?</p>
 <p><strong>Answer</strong>:</p>
-<p>Tyler's analysis is impressive it gives a great overview for context and then addresses some more specific, business relevant aspects of the data.  Rides by hour and rides by duration provided the most interesting insights to me. All of my questions can be answered to some extent. Who uses the bike share appears to be the hardest to determine and the author himself stated that more information would be needed to determine to what extent BART riders are using the service.</p>
+<p>Tyler's analysis is impressive it gives a great overview for context and then addresses some more specific, business relevant aspects of the data.  Rides by hour and rides by duration provided the most interesting insights to me. Most of my questions can be answered to some extent. Who uses the bike share amongst Public Transportation system users appears to be the hardest to determine and the author himself stated that more information would be needed to determine to what extent BART riders are using the service. The analysis does not address user demographics, this would require additional customer data, which may be sensitive, privaliged, or held private for business reasons. Regardng the specific questions posed above:</p>
+<ol>
+<li>What are the demographics of each user? The data and visulaizations do not contain or address demographic information.</li>
+<li>What is the most common day of useage for subsribers, and customers? According to the "Rides by Weekday Plot" subscribers tend to use the serrvice pretty heavily and evenly throughout the weekdays with Tuesday leading by a slight margin. Customers favor weekend useage with Saturday seeing the highest volume.</li>
+<li>What is the most common time of useage for subscribers and customers? Reviewing the "Rides by Hour" plot we see that subscribers use the service most heavily during commute times with very heavy useage from 8-9am and 5-6pm, with 8-9am being most common.</li>
+<li>What is the most common trip duration? According to the visualization "Rides by Duration (min)" 5 to 10 minutes is the most common duration.</li>
+</ol>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">ls</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre> Volume in drive C is Acer
+ Volume Serial Number is 3829-CAE6
+
+ Directory of C:\Users\vhim98198\Documents\udacity\bike_sharing
+
+09/21/2016  11:35 AM    &lt;DIR&gt;          .
+09/21/2016  11:35 AM    &lt;DIR&gt;          ..
+09/19/2016  07:58 AM             1,134 .gitignore
+09/19/2016  07:49 AM    &lt;DIR&gt;          .ipynb_checkpoints
+09/21/2016  11:26 AM         3,210,595 201309_trip_data.csv
+09/21/2016  11:26 AM         2,120,213 201309_trip_summary.csv
+09/19/2016  07:40 AM             2,792 201402_README.txt
+09/19/2016  07:40 AM             5,203 201402_station_data.csv
+09/19/2016  07:40 AM        17,219,022 201402_trip_data.csv
+09/19/2016  07:40 AM            80,799 201402_weather_data.csv
+09/19/2016  07:40 AM             2,274 201408_README.txt
+09/19/2016  07:40 AM             5,262 201408_station_data.csv
+09/19/2016  07:40 AM        20,647,374 201408_trip_data.csv
+09/19/2016  07:40 AM            80,320 201408_weather_data.csv
+09/19/2016  07:40 AM             3,468 201508_README.txt
+09/19/2016  07:40 AM             5,272 201508_station_data.csv
+09/19/2016  07:40 AM        43,012,650 201508_trip_data.csv
+09/19/2016  07:40 AM           158,638 201508_weather_data.csv
+09/19/2016  07:40 AM             2,802 babs_datacheck.py
+09/20/2016  02:17 PM             2,393 babs_datacheck.pyc
+09/19/2016  07:40 AM             6,419 babs_visualizations.py
+09/20/2016  02:17 PM             5,116 babs_visualizations.pyc
+09/21/2016  11:29 AM        52,235,753 babs_y1_y2_summary.csv
+09/21/2016  01:17 AM           554,475 Bay_Area_Bike_Share_Analysis.html
+09/21/2016  11:35 AM           347,668 Bay_Area_Bike_Share_Analysis.ipynb
+09/21/2016  01:23 AM           445,848 Bay_Area_Bike_Share_Analysis.zip
+09/19/2016  07:40 AM               904 README.md
+              24 File(s)    140,156,394 bytes
+               3 Dir(s)  14,166,155,264 bytes free
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -1825,7 +1898,7 @@ e2QjtYsHAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">usage_stats</span><span class="p">(</span><span class="n">trip_data</span><span class="p">)</span>
@@ -1850,7 +1923,7 @@ The median trip duration is 8.62 minutes.
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[28]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[14]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -2372,7 +2445,7 @@ f0zjhq4SoERpAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark = San Jose</span>
@@ -2552,7 +2625,7 @@ OFQuqSsi4qnAzcDJhrbUOfa4JUkqiD1uSZIKYnBLklQQg1uSpIIY3JIkFcTgliSpIAa3JEkF+f+3
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Palo Alto</span>
@@ -2766,7 +2839,7 @@ Z5hLklRzhrkkSTVnmEuSVHOGuSRJNff/AUpFDKn5gsT5AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= San Francisco</span>
@@ -2951,7 +3024,7 @@ W9CSJFXIgJYkqUIGtCRJFTKgJUmqkAEtSVKFDGhJkir0/wG42RRKsQNytwAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Mountain View</span>
@@ -3159,7 +3232,7 @@ B3fSI7bLDbZ+AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Redwoood City</span>
@@ -3379,7 +3452,7 @@ M8wlSarc/wdiSPHCqB+cTQAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[75]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Mountain View</span>
@@ -3560,7 +3633,7 @@ MJckqXH/DyzedwoIG+w9AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Mountain View</span>
@@ -3733,7 +3806,7 @@ SYUy5CVJKpQhL0lSoQx5SZIKZchLklQoQ16SpEIZ8pIkFeo/AfEuW3JPd0YKAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Mountain View</span>
@@ -3925,7 +3998,7 @@ qUAGuCRJBTLAJUkqkAEuSVKBDHBJkgpkgEuSVKD/BwvUj9c+jRHrAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[78]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Palo Alto</span>
@@ -4112,7 +4185,7 @@ Vc4wlySpcv8Pis7u/RKylusAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Palo Alto</span>
@@ -4290,7 +4363,7 @@ SVKhDHmDLzbPAAAAD0lEQVRJkgplyEuSVKj/DzvoxQEX2NlwAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= Palo Alto</span>
@@ -4488,7 +4561,7 @@ pAIZ4JIkFcgAlySpQAa4JEkF+l/R6wTbaLIw/wAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= San Francisco</span>
@@ -4675,7 +4748,7 @@ XJKkChngkiRV6P8Bb7btgwCYAM0AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= San Francisco</span>
@@ -4839,7 +4912,7 @@ D1GXt5SUWuRtWyVJKoh77JIkFcRglySpIAa7JEkFMdglSSqIwS5JUkEMdkmSCmKwS5JUEINdkqSC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[90]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= San Francisco</span>
@@ -5009,7 +5082,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[88]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Embark= San Francisco</span>
@@ -5201,7 +5274,7 @@ SZIKY7hLklSY/wSIqHKNXJCn7QAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Final Plot 1</span>
@@ -5428,7 +5501,7 @@ Z5hLklRzhrkkSTVnmEuSVHOGuSRJNff/AUpFDKn5gsT5AAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Final Plot 2</span>
